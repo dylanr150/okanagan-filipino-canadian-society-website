@@ -1,4 +1,13 @@
 /* ---------- Home Gallery / Slider ---------- */
+
+.home-gallery .slide {
+  pointer-events: none; /* inactive slides can't steal clicks */
+}
+
+.home-gallery .slide.is-active {
+  pointer-events: auto; /* only active slide is clickable */
+}
+
 .home-gallery {
   position: relative;
   width: 100%;
@@ -155,4 +164,5 @@
   .home-gallery p {
     display: none; /* keep it clean on small screens */
   }
+
 }

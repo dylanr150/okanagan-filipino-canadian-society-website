@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       text: "Important updates will be shared here as the site grows. For now, refer to our Facebook page.",
       image: "https://picsum.photos/id/1015/1600/900",
       linkText: "Read more",
-      linkHref: "news.html"
+      linkHref: "https://www.facebook.com/groups/okanaganfilipinoclub/discussion/preview"
     },
     {
       type: "Community",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "https://picsum.photos/id/1025/1600/900",
       linkText: "Learn more",
       linkHref: "about_us.html"
-    }
+    }   
   ];
 
   const track = document.getElementById("galleryTrack");
@@ -34,24 +34,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!track || !dotsWrap) return;
 
-  // Build slides + dots
-  track.innerHTML = slidesData.map((s, i) => `
-    <article class="slide ${i === 0 ? "is-active" : ""}">
-      <img src="${s.image}" alt="${s.title}">
-      <div class="overlay">
-        <div class="overlay-inner">
-          <div class="kicker">${s.type}</div>
-          <h2>${s.title}</h2>
-          <p>${s.text}</p>
-          <a class="readmore" href="${s.linkHref}">${s.linkText}</a>
-        </div>
-      </div>
-    </article>
-  `).join("");
+// Build slides + dots (DOM nodes = no HTML parsing quirks)
+track.innerHTML = "";
+dotsWrap.innerHTML = "";
 
-  dotsWrap.innerHTML = slidesData.map((_, i) => `
-    <button class="dot ${i === 0 ? "is-active" : ""}" type="button" aria-label="Go to slide ${i + 1}"></button>
-  `).join("");
+slidesData.forEach((s, i) => {
+  const article = document.createElement("article");
+  article.className = "slide" + (i === 0 ? " is-active" : "");
+
+  const img = document.createElement("img");
+  img.src = s.image;
+  img.alt = s.title;
+
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+
+  const inner = document.createElement("div");
+  inner.className = "overlay-inner";
+
+  const kicker = document.createElement("div");
+  kicker.className = "kicker";
+  kicker.textContent = s.type;
+
+  const h2 = document.createElement("h2");
+  h2.textContent = s.title;
+
+  const p = document.createElement("p");
+  p.textContent = s.text;
+
+const a = document.createElement("a");
+a.className = "readmore";
+a.textContent = s.linkText;
+
+// keep href for right-click / accessibility
+a.href = s.linkHref;
+
+// force correct navigation on left click
+a.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  const url = s.linkHref;
+  if (url.startsWith("http")) {
+    window.open(url, "_blank", "noopener");
+  } else {
+    window.location.href = url;
+  }
+}, true); // <-- capture phase (wins against other listeners)
+
+
+  inner.append(kicker, h2, p, a);
+  overlay.appendChild(inner);
+  article.append(img, overlay);
+  track.appendChild(article);
+
+  const dot = document.createElement("button");
+  dot.className = "dot" + (i === 0 ? " is-active" : "");
+  dot.type = "button";
+  dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+  dotsWrap.appendChild(dot);
+});
+
 
   const slides = Array.from(document.querySelectorAll(".home-gallery .slide"));
   const dots = Array.from(document.querySelectorAll(".home-gallery .dot"));
@@ -101,4 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   startAuto();
+
+  document.addEventListener("click", (e) => {
+  console.log("CLICKED:", e.target);
+}, true);
+
 });
