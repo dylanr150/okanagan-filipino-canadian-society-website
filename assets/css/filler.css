@@ -1,0 +1,149 @@
+/* ---------- Shared page sections ---------- */
+.page-hero {
+  padding: 2.5rem 0 1.75rem;
+  background: #f6f8fc;
+  border-bottom: 1px solid #e9edf5;
+}
+
+.page-hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #12213f;
+}
+
+.page-hero p {
+  margin: 0.25rem 0 0;
+  color: rgba(18, 33, 63, 0.78);
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.hero-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.btn.primary {
+  background: #23407c;
+  color: white;
+}
+
+.btn.primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn.secondary {
+  background: white;
+  color: #23407c;
+  border-color: #cdd6ea;
+}
+
+.btn.secondary:hover {
+  background: #f2f5fb;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  color: #12213f;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e7ecf6;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #12213f;
+}
+
+.card p {
+  margin: 0;
+  color: rgba(18, 33, 63, 0.78);
+  line-height: 1.6;
+}
+
+.meta {
+  margin-top: 0.85rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  color: rgba(18, 33, 63, 0.72);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background: #f2f5fb;
+  color: #23407c;
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: fit-content;
+}
+
+.callout {
+  background: #0f172a;
+  color: #e7ecf6;
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.callout p {
+  margin: 0;
+  line-height: 1.6;
+  color: rgba(231, 236, 246, 0.88);
+  max-width: 70ch;
+}
+
+.callout .btn.secondary {
+  border-color: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.callout .btn.secondary:hover {
+  background: rgba(255,255,255,0.16);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
