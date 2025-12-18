@@ -1,0 +1,158 @@
+/* ---------- Home Gallery / Slider ---------- */
+.home-gallery {
+  position: relative;
+  width: 100%;
+  height: clamp(500px, 80vh, 700px);
+  overflow: hidden;
+  background: #f3f5f9;
+  margin: 0rem auto;
+}
+
+.home-gallery .gallery-track {
+  height: 100%;
+  position: relative;
+}
+
+.home-gallery .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.home-gallery .slide.is-active {
+  opacity: 1;
+}
+
+.home-gallery .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay */
+.home-gallery .overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: end center;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05) 55%);
+}
+
+.home-gallery .overlay-inner {
+  width: min(1000px, 95%);
+  color: #fff;
+}
+
+.home-gallery .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.95;
+  margin-bottom: 0.5rem;
+}
+
+.home-gallery h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  line-height: 1.15;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+}
+
+.home-gallery p {
+  margin: 0 0 1rem;
+  max-width: 70ch;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.92);
+}
+
+/* Read more button */
+.home-gallery .readmore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #23407c;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+.home-gallery .readmore:hover {
+  filter: brightness(0.95);
+}
+
+/* Arrows */
+.home-gallery .gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.home-gallery .gallery-btn:hover {
+  background: rgba(0,0,0,0.5);
+}
+
+.home-gallery .gallery-btn.prev { left: 14px; }
+.home-gallery .gallery-btn.next { right: 14px; }
+
+/* Dots */
+.home-gallery .gallery-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.home-gallery .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,0.55);
+  cursor: pointer;
+}
+
+.home-gallery .dot.is-active {
+  background: #fff;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .home-gallery {
+    height: clamp(320px, 65vh, 420px);
+  }
+
+  .home-gallery .gallery-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .home-gallery .overlay {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .home-gallery p {
+    display: none; /* keep it clean on small screens */
+  }
+}
