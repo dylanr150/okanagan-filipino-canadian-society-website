@@ -11,11 +11,16 @@ header{
 }
 
 .main-header {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.main-header a{
+  display: block;
 }
 
 
@@ -28,13 +33,14 @@ nav a {
 
 .nav-list{
     list-style-type: none;
-    padding: 0.75rem;
+    padding: 0.75rem 0;
     margin: 0;
     display: flex;
     background-color: white;
     font-size: 1.25rem;
-    gap: 4rem;
+    gap: 3rem;
     justify-content: flex-end;
+    flex-wrap: nowrap; 
 }
 
 .nav-list a {
@@ -42,7 +48,7 @@ nav a {
   padding: 0.45rem 0.85rem;
   line-height: 1.1;
   border-radius: 8px;
-  
+
 }
 
 
@@ -51,6 +57,7 @@ nav a {
     color: #23407c;
     padding: 0.6rem 0.9rem;
     border-radius: 8px;
+    white-space: nowrap;
   }
   #contact {
   color: #ed1b26;
@@ -87,14 +94,14 @@ nav a {
 }
 
 .top-bar {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   align-items: center;
-  padding: 0.1rem 2rem;
+  padding: 0.1rem 0;
   font-size: 0.75rem;
   font-weight: 500;
   background-color: #ffffff; /* keep white */
   border-bottom: 1px solid #e5e5e5;
+  width: 100%;
 }
 
 .top-left {
@@ -147,6 +154,26 @@ nav a {
   font-family: 'Inter', sans-serif;
   color: #12213f;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;  /* 👈 bottom align */
+}
+
+
 
 
 
