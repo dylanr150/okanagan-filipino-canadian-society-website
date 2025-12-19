@@ -1,3 +1,17 @@
+#google_translate_element {
+  font-size: 0.85rem;
+}
+
+.goog-te-gadget {
+  font-family: 'Inter', sans-serif !important;
+  color: #23407c;
+}
+
+.goog-te-gadget select {
+  border-radius: 6px;
+  padding: 0.2rem 0.4rem;
+}
+
 
 html{
     height: 100%;
