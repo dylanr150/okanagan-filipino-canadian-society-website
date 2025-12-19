@@ -11,7 +11,7 @@
 .home-gallery {
   position: relative;
   width: 100%;
-  height: clamp(500px, 80vh, 700px);
+  height: clamp(500px, 80vh, 1000px);
   overflow: hidden;
   background: #f3f5f9;
   margin: 0rem auto;
