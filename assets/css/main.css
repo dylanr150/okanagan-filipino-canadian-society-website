@@ -181,7 +181,96 @@ nav a {
   align-items: flex-end;  /* 👈 bottom align */
 }
 
+/* --- Critical: prevent flex children from causing overflow --- */
+.main-header .container > * {
+  min-width: 0;
+}
 
+/* Desktop: keep as-is */
+.nav-list {
+  /* keep your styles, but reduce gap so it fits longer */
+  gap: 2rem; /* was 3rem — this alone helps a lot */
+}
+
+/* Hide mobile UI on desktop */
+.menu-toggle,
+.mobile-nav {
+  display: none;
+}
+
+/* Hamburger button styling */
+.menu-toggle {
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.55rem 0.85rem;
+  font-weight: 600;
+  color: #23407c;
+  cursor: pointer;
+}
+
+/* Mobile dropdown menu */
+.mobile-nav {
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 0.75rem 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mobile-nav-list a {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #23407c;
+  font-weight: 500;
+}
+
+/* When open */
+.main-header.menu-open .mobile-nav {
+  display: block;
+}
+
+/* Breakpoint: swap desktop nav for hamburger */
+@media (max-width: 900px) {
+  .nav-bar {
+    display: none; /* hide your existing desktop nav */
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  /* Make main header container wrap so dropdown can sit underneath */
+  .main-header .container {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Ensure logo + button stay on same row, menu drops below */
+  .menu-toggle {
+    margin-left: auto;
+  }
+
+  .mobile-nav {
+    display: none; /* shown only when .menu-open is added */
+  }
+}
+
+/* Optional: if ANYTHING else causes horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
 
 
 
