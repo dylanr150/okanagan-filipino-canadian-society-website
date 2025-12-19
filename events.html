@@ -43,6 +43,19 @@
                 <div class="main-header">
                     <div class="container">
                     <a href="index.html"><img class="logo" src="assets/images/logo.png"></a>
+                    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+                    ☰ Menu
+                    </button>
+                        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+                        <ul class="mobile-nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="events.html">Events</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+                        </ul>
+                        </nav>
                         <div class="nav-bar">
                         <nav>
                             <ul class="nav-list">
@@ -194,6 +207,24 @@
                 </div>
             </div>
         </footer>
+        <script>
+            const header = document.querySelector(".main-header");
+            const btn = document.querySelector(".menu-toggle");
+
+            btn.addEventListener("click", () => {
+                const open = header.classList.toggle("menu-open");
+                btn.setAttribute("aria-expanded", open ? "true" : "false");
+            });
+
+            // Close menu when going back to desktop size
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 900) {
+                header.classList.remove("menu-open");
+                btn.setAttribute("aria-expanded", "false");
+                }
+            });
+        </script>
+    </body>    
 </html>
 
 
