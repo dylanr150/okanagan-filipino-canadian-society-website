@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "Event",
       title: "Community Gathering — Details Coming Soon",
       text: "We’re updating the events calendar. In the meantime, check our Events page for updates.",
-      image: "https://picsum.photos/id/1011/1600/900",
+      image: "assets/images/community1.jpeg",
       linkText: "Read more",
       linkHref: "events.html"
     },
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "News",
       title: "Society Updates & Announcements",
       text: "Important updates will be shared here as the site grows. For now, refer to our Facebook page.",
-      image: "https://picsum.photos/id/1015/1600/900",
+      image: "assets/images/lakeview.jpg",
       linkText: "Read more",
       linkHref: "https://www.facebook.com/groups/okanaganfilipinoclub/discussion/preview"
     },
@@ -21,10 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "Community",
       title: "Celebrating Culture in the Okanagan",
       text: "We’re building a space to highlight Filipino-Canadian culture, stories, and community connection.",
-      image: "https://picsum.photos/id/1025/1600/900",
+      image: "assets/images/community2.jpeg",
       linkText: "Learn more",
       linkHref: "about_us.html"
-    }   
+    },
+    {
+      type: "Community",
+      title: "Honouring Filipino Roots",
+      text: "Creating a platform that uplifts Filipino-Canadian heritage, shared stories, and meaningful connections across the Okanagan.",
+      image: "assets/images/community3.jpeg",
+      linkText: "Learn more",
+      linkHref: "about_us.html"
+    },
+    {
+      type: "Community",
+      title: "A Home for Community & Culture",
+      text: "Bringing people together through Filipino-Canadian experiences, traditions, and voices rooted in the Okanagan.",
+      image: "assets/images/community4.jpeg",
+      linkText: "Contact Us",
+      linkHref: "contact_us.html"
+    }           
   ];
 
   const track = document.getElementById("galleryTrack");
