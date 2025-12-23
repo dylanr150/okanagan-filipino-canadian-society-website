@@ -76,16 +76,56 @@
             
         </header>
         
-            <main class = "page-content">
-                <section class="home-gallery" aria-label="Featured updates">
-                    <div class="gallery-track" id="galleryTrack"></div>
+        <main class="page-content">
+        <section class="home-hero">
+            <div class="container home-hero-grid">
 
-                        <button class="gallery-btn prev" type="button" aria-label="Previous slide">‹</button>
-                        <button class="gallery-btn next" type="button" aria-label="Next slide">›</button>
+            <!-- LEFT: Gallery (your existing slider) -->
+            <section class="home-gallery" aria-label="Featured updates">
+                <div class="gallery-track" id="galleryTrack"></div>
 
-                    <div class="gallery-dots" id="galleryDots" aria-label="Slide navigation"></div>
-                </section>
-            </main>
+                <button class="gallery-btn prev" type="button" aria-label="Previous slide">‹</button>
+                <button class="gallery-btn next" type="button" aria-label="Next slide">›</button>
+
+                <div class="gallery-dots" id="galleryDots" aria-label="Slide navigation"></div>
+            </section>
+
+            <!-- RIGHT: Announcements -->
+            <aside class="announcements" aria-label="Announcements">
+                <div class="announcements-header">
+                <h2>Announcements</h2>
+                <div class="announcements-date" id="todayDate"></div>
+                </div>
+
+                <ul class="announcements-list">
+                <li class="announcement">
+                    <div class="a-date">Dec 22</div>
+                    <a class="a-title" href="news.html">Advisory No. 34-2025: 2026 Consular Outreach Missions</a>
+                </li>
+
+                <li class="announcement">
+                    <div class="a-date">Dec 16</div>
+                    <a class="a-title" href="news.html">Season’s Greetings from the Philippine Consulate General in Vancouver</a>
+                </li>
+
+                <li class="announcement">
+                    <div class="a-date">Dec 12</div>
+                    <a class="a-title" href="news.html">Advisory No. 33-2025: Holiday Advisory for January 2026</a>
+                </li>
+
+                <li class="announcement">
+                    <div class="a-date">Nov 28</div>
+                    <a class="a-title" href="news.html">162nd Birth Anniversary of Andres Bonifacio</a>
+                </li>
+                </ul>
+
+                <a class="announcements-more" href="news.html">View all announcements →</a>
+            </aside>
+
+            </div>
+        </section>
+        </main>
+
             
 
         <footer class="site-footer">
@@ -173,6 +213,12 @@
                 btn.setAttribute("aria-expanded", "false");
                 }
             });
+        </script>
+        <script>
+            const el = document.getElementById("todayDate");
+            if (el) {
+                el.textContent = new Date().toLocaleDateString(undefined, { weekday:"long", year:"numeric", month:"long", day:"numeric" });
+            }
         </script>
     </body>
 </html>
