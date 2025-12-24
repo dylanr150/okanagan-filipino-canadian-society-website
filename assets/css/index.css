@@ -1,36 +1,330 @@
-/* ---------- Home Gallery / Slider ---------- */
+/* =========================================================
+   INTRO HERO (Top of Homepage)
+========================================================= */
 
-.home-gallery .slide {
-  pointer-events: none; /* inactive slides can't steal clicks */
+.intro-hero {
+  padding: 2.25rem 0 1.5rem;
+  background: #f6f8fc;
+  border-bottom: 1px solid #e7e7e7;
 }
 
-.home-gallery .slide.is-active {
-  pointer-events: auto; /* only active slide is clickable */
+.intro-hero-inner {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 1.5rem;
+  align-items: center;
 }
+
+.intro-eyebrow {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  color: #23407c;
+}
+
+.intro-hero-copy h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.05;
+  color: #091024;
+}
+
+.intro-subheading {
+  margin: 0 0 1.25rem;
+  max-width: 70ch;
+  line-height: 1.7;
+  color: #3a445c;
+  font-size: 1.05rem;
+}
+
+.intro-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Buttons (scoped, so it won't mess with other pages) */
+.intro-hero .btn,
+.program-preview .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: #23407c;
+  color: #ffffff;
+  box-shadow: 0 12px 28px rgba(35, 64, 124, 0.22);
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #23407c;
+  border-color: #d7deee;
+  box-shadow: 0 10px 24px rgba(10, 20, 40, 0.06);
+}
+
+.btn-secondary:hover {
+  filter: brightness(0.98);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #23407c;
+  border-color: #d7deee;
+}
+
+.btn-ghost:hover {
+  background: rgba(35, 64, 124, 0.06);
+}
+
+/* Milestone side card */
+.intro-hero-side {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.milestone-card {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 10px 30px rgba(10, 20, 40, 0.08);
+  padding: 1.25rem 1.25rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.since-badge {
+  display: inline-flex;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(35, 64, 124, 0.1);
+  color: #23407c;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.milestone-number {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #091024;
+}
+
+.milestone-label {
+  margin: 0.35rem 0 0;
+  color: #3a445c;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Milestone strip (below intro hero)
+========================================================= */
+
+.milestone-strip {
+  padding: 1.1rem 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.milestone-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.milestone-strip h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  color: #091024;
+}
+
+.milestone-strip p {
+  margin: 0;
+  color: #3a445c;
+  line-height: 1.6;
+  max-width: 85ch;
+}
+
+.milestone-link {
+  white-space: nowrap;
+  font-weight: 800;
+  color: #23407c;
+  text-decoration: none;
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #d7deee;
+  background: #ffffff;
+}
+
+.milestone-link:hover {
+  background: rgba(35, 64, 124, 0.06);
+}
+
+/* =========================================================
+   Program Preview (Mid-homepage)
+========================================================= */
+
+.program-preview {
+  padding: 2.25rem 0 2.5rem;
+  background: #f6f8fc;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 1.25rem;
+}
+
+.program-preview-head h2 {
+  margin: 0 0 0.5rem;
+  color: #091024;
+  font-size: 1.5rem;
+}
+
+.program-preview-head p {
+  margin: 0;
+  color: #3a445c;
+  line-height: 1.7;
+  max-width: 90ch;
+}
+
+.program-cards {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.program-card {
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 10px 30px rgba(10, 20, 40, 0.06);
+  padding: 1.1rem 1.1rem 1.25rem;
+}
+
+.program-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #091024;
+}
+
+.program-card p {
+  margin: 0;
+  color: #3a445c;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.program-preview-actions {
+  margin-top: 1.25rem;
+}
+
+/* =========================================================
+   Footer reinforcement line (optional styling)
+========================================================= */
+
+.footer-reinforce {
+  margin-top: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   RESPONSIVE additions (keeps your existing responsive rules)
+========================================================= */
+
+@media (max-width: 980px) {
+  .intro-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-hero-side {
+    justify-content: flex-start;
+  }
+
+  .milestone-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .program-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .program-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-subheading {
+    font-size: 1rem;
+  }
+}
+
+
+/* =========================================================
+   HOME HERO: Gallery + Announcements
+========================================================= */
+
+.home-hero {
+  padding: 1.75rem 0 2.25rem;
+}
+
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.25rem;
+  align-items: stretch; /* Ensures equal height columns */
+}
+
+/* =========================================================
+   HOME GALLERY / SLIDER
+========================================================= */
 
 .home-gallery {
   position: relative;
   width: 100%;
-  height: clamp(500px, 80vh, 1000px);
-  overflow: hidden;
+  height: clamp(500px, 60vh, 1000px);
   background: #f3f5f9;
-  margin: 0rem auto;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 10px 30px rgba(10, 20, 40, 0.08);
 }
 
+/* Track */
 .home-gallery .gallery-track {
   height: 100%;
   position: relative;
 }
 
+/* Slides */
 .home-gallery .slide {
   position: absolute;
   inset: 0;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 350ms ease;
 }
 
 .home-gallery .slide.is-active {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .home-gallery .slide img {
@@ -47,41 +341,42 @@
   display: grid;
   place-items: end center;
   padding: 1rem 1.25rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.05) 55%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.05) 55%
+  );
 }
 
 .home-gallery .overlay-inner {
   width: min(1000px, 95%);
-  color: #fff;
+  color: #ffffff;
 }
 
 .home-gallery .kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  opacity: 0.95;
   margin-bottom: 0.5rem;
+  opacity: 0.95;
 }
 
 .home-gallery h2 {
   margin: 0 0 0.5rem;
   font-size: clamp(1.4rem, 2.8vw, 2.2rem);
   line-height: 1.15;
-  text-shadow: 0 2px 14px rgba(0,0,0,0.35);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
 }
 
 .home-gallery p {
   margin: 0 0 1rem;
   max-width: 70ch;
   line-height: 1.6;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
 }
 
-/* Read more button */
+/* Read More Button */
 .home-gallery .readmore {
   display: inline-flex;
   align-items: center;
@@ -92,24 +387,24 @@
   color: #23407c;
   text-decoration: none;
   font-weight: 700;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
 .home-gallery .readmore:hover {
   filter: brightness(0.95);
 }
 
-/* Arrows */
+/* Navigation Arrows */
 .home-gallery .gallery-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 46px;
   height: 46px;
-  border: none;
   border-radius: 999px;
-  background: rgba(0,0,0,0.35);
-  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
   font-size: 28px;
   cursor: pointer;
   display: grid;
@@ -117,11 +412,16 @@
 }
 
 .home-gallery .gallery-btn:hover {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.home-gallery .gallery-btn.prev { left: 14px; }
-.home-gallery .gallery-btn.next { right: 14px; }
+.home-gallery .gallery-btn.prev {
+  left: 14px;
+}
+
+.home-gallery .gallery-btn.next {
+  right: 14px;
+}
 
 /* Dots */
 .home-gallery .gallery-dots {
@@ -138,31 +438,122 @@
   height: 10px;
   border-radius: 999px;
   border: none;
-  background: rgba(255,255,255,0.55);
+  background: rgba(255, 255, 255, 0.55);
   cursor: pointer;
 }
 
 .home-gallery .dot.is-active {
-  background: #fff;
+  background: #ffffff;
 }
 
-/* Responsive tweaks */
+/* =========================================================
+   ANNOUNCEMENTS
+========================================================= */
+
+.announcements {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 0rem 1.5rem;
+}
+
+.announcements-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.announcements h2 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #091024;
+}
+
+.announcements-date {
+  font-size: 0.9rem;
+  color: #6b7488;
+}
+
+.announcements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.85rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.announcement {
+  display: grid;
+  grid-template-columns: 4.25rem 1fr;
+  gap: 0.75rem;
+}
+
+.a-date {
+  font-size: 0.9rem;
+  color: #6b7488;
+  line-height: 1.2;
+}
+
+.a-title {
+  color: #12213f;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.a-title:hover {
+  color: #23407c;
+  text-decoration: underline;
+}
+
+.announcements-more {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #23407c;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.announcements-more:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 980px) {
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-gallery {
+    height: min(460px, 58vh);
+  }
+}
+
 @media (max-width: 700px) {
   .home-gallery {
     height: clamp(320px, 65vh, 420px);
   }
 
-  .home-gallery .gallery-btn {
-    width: 42px;
-    height: 42px;
-  }
-
-  .home-gallery .overlay {
-    padding: 1.25rem 1rem 2rem;
-  }
-
   .home-gallery p {
-    display: none; /* keep it clean on small screens */
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-gallery {
+    height: 360px;
   }
 
+  .announcement {
+    grid-template-columns: 3.75rem 1fr;
+  }
 }

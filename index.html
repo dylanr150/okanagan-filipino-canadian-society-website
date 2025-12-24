@@ -76,16 +76,141 @@
             
         </header>
         
-            <main class = "page-content">
-                <section class="home-gallery" aria-label="Featured updates">
-                    <div class="gallery-track" id="galleryTrack"></div>
+        <main class="page-content">
 
-                        <button class="gallery-btn prev" type="button" aria-label="Previous slide">‹</button>
-                        <button class="gallery-btn next" type="button" aria-label="Next slide">›</button>
+        <!-- NEW: Hero intro (above the fold) -->
+        <section class="intro-hero" aria-label="OFCS introduction">
+            <div class="container intro-hero-inner">
+            <div class="intro-hero-copy">
+                <p class="intro-eyebrow">Okanagan Filipino-Canadian Society</p>
+                <h1>Rooted in Culture. United in Community.</h1>
+                <p class="intro-subheading">
+                Celebrating 30 years of serving Filipino-Canadians in the Okanagan, the Okanagan Filipino-Canadian Society (OFCS)
+                connects people through culture, service, and bayanihan—building a strong, inclusive community for generations past,
+                present, and future.
+                </p>
 
-                    <div class="gallery-dots" id="galleryDots" aria-label="Slide navigation"></div>
-                </section>
-            </main>
+                <div class="intro-cta">
+                <a class="btn btn-primary" href="events.html">Explore Our 2026 Programs</a>
+                <a class="btn btn-secondary" href="contact_us.html">Get Involved / Volunteer</a>
+                <a class="btn btn-ghost" href="about_us.html">Become a Member</a>
+                </div>
+            </div>
+
+            <div class="intro-hero-side" aria-label="Milestone badge">
+                <div class="milestone-card">
+                <div class="since-badge" aria-label="Since 1994 badge">Since 1994</div>
+                <p class="milestone-number">30</p>
+                <p class="milestone-label">Years of Community</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- NEW: Full-width milestone highlight strip (below hero) -->
+        <section class="milestone-strip" aria-label="30-year milestone highlight">
+            <div class="container milestone-strip-inner">
+            <div class="milestone-strip-copy">
+                <h2>30 Years of Community, Culture, and Connection</h2>
+                <p>
+                For three decades, OFCS has proudly supported Filipino-Canadians across the Okanagan—celebrating culture,
+                welcoming newcomers, empowering youth, and fostering lifelong community connections through service and shared heritage.
+                </p>
+            </div>
+            <a class="milestone-link" href="about_us.html">Our Story &amp; History →</a>
+            </div>
+        </section>
+
+        <!-- EXISTING: Gallery + Announcements (unchanged) -->
+        <section class="home-hero">
+            <div class="container home-hero-grid">
+
+            <!-- LEFT: Gallery (your existing slider) -->
+            <section class="home-gallery" aria-label="Featured updates">
+                <div class="gallery-track" id="galleryTrack"></div>
+
+                <button class="gallery-btn prev" type="button" aria-label="Previous slide">‹</button>
+                <button class="gallery-btn next" type="button" aria-label="Next slide">›</button>
+
+                <div class="gallery-dots" id="galleryDots" aria-label="Slide navigation"></div>
+            </section>
+
+            <!-- RIGHT: Announcements -->
+            <aside class="announcements" aria-label="Announcements">
+                <div class="announcements-header">
+                <h2>Announcements</h2>
+                <div class="announcements-date" id="todayDate"></div>
+                </div>
+
+                <ul class="announcements-list">
+                <li class="announcement">
+                    <div class="a-date">Dec 22</div>
+                    <a class="a-title" href="news.html">Advisory No. 34-2025: 2026 Consular Outreach Missions</a>
+                </li>
+
+                <li class="announcement">
+                    <div class="a-date">Dec 16</div>
+                    <a class="a-title" href="news.html">Season’s Greetings from the Philippine Consulate General in Vancouver</a>
+                </li>
+
+                <li class="announcement">
+                    <div class="a-date">Dec 12</div>
+                    <a class="a-title" href="news.html">Advisory No. 33-2025: Holiday Advisory for January 2026</a>
+                </li>
+
+                <li class="announcement">
+                    <div class="a-date">Nov 28</div>
+                    <a class="a-title" href="news.html">162nd Birth Anniversary of Andres Bonifacio</a>
+                </li>
+                </ul>
+
+                <a class="announcements-more" href="news.html">View all announcements →</a>
+            </aside>
+
+            </div>
+        </section>
+
+        <!-- NEW: Program preview section (mid-homepage) -->
+        <section class="program-preview" aria-label="2026 program preview">
+            <div class="container program-preview-inner">
+            <div class="program-preview-head">
+                <h2>What 2026 Looks Like</h2>
+                <p>
+                Our 2026 programming reflects the heart of OFCS—culture, youth, family, wellness, and community. While dates will be
+                announced soon and programs may evolve, here’s an at-a-glance look at what the year ahead has in store.
+                </p>
+            </div>
+
+            <div class="program-cards" role="list">
+                <div class="program-card" role="listitem">
+                <h3>Culture &amp; Heritage</h3>
+                <p>Community celebrations, heritage showcases, and events that keep our traditions thriving.</p>
+                </div>
+
+                <div class="program-card" role="listitem">
+                <h3>Youth &amp; Leadership</h3>
+                <p>Youth programming and mentorship that builds confidence, skills, and community pride.</p>
+                </div>
+
+                <div class="program-card" role="listitem">
+                <h3>Family &amp; Community</h3>
+                <p>Gatherings and initiatives that bring families together and strengthen local connections.</p>
+                </div>
+
+                <div class="program-card" role="listitem">
+                <h3>Wellness &amp; Support</h3>
+                <p>Workshops and resources that support wellbeing, inclusion, and a sense of belonging.</p>
+                </div>
+            </div>
+
+            <div class="program-preview-actions">
+                <a class="btn btn-primary" href="events.html">View 2026 At-a-Glance Calendar</a>
+            </div>
+            </div>
+        </section>
+
+        </main>
+
             
 
         <footer class="site-footer">
@@ -100,6 +225,11 @@
                 <p class="footer-landack">
                     We respectfully acknowledge that we are on the traditional, ancestral, and unceded territory of the Syilx Okanagan Nation.
                 </p>
+
+                <p class="footer-reinforce">
+                    Rooted in Culture. United in Community. Serving Filipino-Canadians in the Okanagan for over 30 years.
+                </p>
+
                 </div>
 
                 <!-- Column 2: Quick Links -->
@@ -173,6 +303,12 @@
                 btn.setAttribute("aria-expanded", "false");
                 }
             });
+        </script>
+        <script>
+            const el = document.getElementById("todayDate");
+            if (el) {
+                el.textContent = new Date().toLocaleDateString(undefined, { weekday:"long", year:"numeric", month:"long", day:"numeric" });
+            }
         </script>
     </body>
 </html>

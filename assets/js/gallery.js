@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "Community",
       title: "Celebrating Culture in the Okanagan",
       text: "We’re building a space to highlight Filipino-Canadian culture, stories, and community connection.",
-      image: "assets/images/community2.jpeg",
+      image: "assets/images/community5.jpeg",
       linkText: "Learn more",
       linkHref: "about_us.html"
     },
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       type: "Community",
       title: "Honouring Filipino Roots",
       text: "Creating a platform that uplifts Filipino-Canadian heritage, shared stories, and meaningful connections across the Okanagan.",
-      image: "assets/images/community3.jpeg",
+      image: "assets/images/community6.jpeg",
       linkText: "Learn more",
       linkHref: "about_us.html"
     },
