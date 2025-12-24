@@ -1,435 +1,697 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Events | Okanagan Filipino Canadians</title>
-        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/css/events.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Events | Okanagan Filipino Canadians</title>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    />
 
-        <link rel="preload" as="image" href="assets/images/logo.png">
-        <link rel="preload" as="image" href="assets/images/mail.png">
-        <link rel="preload" as="image" href="assets/images/phone.png">
-        <link rel="preload" as="image" href="assets/images/facebook.png">
-        <link rel="preload" as="image" href="assets/images/instagram.png">
-    </head>
-    <body>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/events.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preload" as="image" href="assets/images/logo.png" />
+    <link rel="preload" as="image" href="assets/images/mail.png" />
+    <link rel="preload" as="image" href="assets/images/phone.png" />
+    <link rel="preload" as="image" href="assets/images/facebook.png" />
+    <link rel="preload" as="image" href="assets/images/instagram.png" />
+  </head>
+
+  <body>
     <header>
-    <div class="top-bar">
+      <div class="top-bar">
         <div class="container">
-        <div class="top-left">
-            <img class="info" src="assets/images/mail.png"> <p class="info-text">info@ofcs.ca</p>
+          <div class="top-left">
+            <img class="info" src="assets/images/mail.png" />
+            <p class="info-text">info@ofcs.ca</p>
             <p class="info-text">|</p>
-            <img class="info" src="assets/images/phone.png"> <p class="info-text">Coming Soon</p>
-        </div>
+            <img class="info" src="assets/images/phone.png" />
+            <p class="info-text">Coming Soon</p>
+          </div>
 
-        <div class="top-right">
-            <a href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener">
-            <img class="socials" src="assets/images/facebook.png">
+          <div class="top-right">
+            <a
+              href="https://www.facebook.com/groups/okanaganfilipinoclub"
+              target="_blank"
+              rel="noopener"
+            >
+              <img class="socials" src="assets/images/facebook.png" />
             </a>
-            <a href="#"><img class="socials" src="assets/images/instagram.png"></a>
+            <a href="#"><img class="socials" src="assets/images/instagram.png" /></a>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
 
-    <hr class="header-divider">
+      <hr class="header-divider" />
 
-    <div class="main-header">
+      <div class="main-header">
         <div class="container">
-        <a href="index.html"><img class="logo" src="assets/images/logo.png"></a>
+          <a href="index.html"><img class="logo" src="assets/images/logo.png" /></a>
 
-        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+          <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
             ☰ Menu
-        </button>
+          </button>
 
-        <!-- MOBILE NAV -->
-        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+          <!-- MOBILE NAV -->
+          <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
             <ul class="mobile-nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="news.html">News</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="news.html">News</a></li>
 
-            <!-- About Us + dropdown (mobile) -->
-            <li class="has-submenu">
-                <button class="mobile-submenu-toggle submenu-toggle" type="button" aria-expanded="false">
-                About Us
-                <span class="chev" aria-hidden="true">▾</span>
+              <li class="has-submenu">
+                <button
+                  class="mobile-submenu-toggle submenu-toggle"
+                  type="button"
+                  aria-expanded="false"
+                >
+                  About Us
+                  <span class="chev" aria-hidden="true">▾</span>
                 </button>
                 <ul class="submenu" aria-label="About Us submenu">
-                <li><a href="about_us.html">About Us Overview</a></li>
-                <li><a href="bod.html">Board of Directors</a></li>
+                  <li><a href="about_us.html">About Us Overview</a></li>
+                  <li><a href="bod.html">Board of Directors</a></li>
                 </ul>
-            </li>
+              </li>
 
-            <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+              <li><a id="contact" href="contact_us.html">Contact Us</a></li>
             </ul>
-        </nav>
+          </nav>
 
-        <!-- DESKTOP NAV -->
-        <div class="nav-bar">
+          <!-- DESKTOP NAV -->
+          <div class="nav-bar">
             <nav aria-label="Primary">
-            <ul class="nav-list">
+              <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a class="active" href="events.html">Events</a></li>
                 <li><a href="news.html">News</a></li>
 
-                <!-- About Us + dropdown (desktop hover) -->
                 <li class="has-submenu">
-                <a href="about_us.html" aria-haspopup="true" aria-expanded="false">
+                  <a href="about_us.html" aria-haspopup="true" aria-expanded="false">
                     About Us <span class="chev" aria-hidden="true">▾</span>
-                </a>
-                <ul class="submenu" aria-label="About Us submenu">
+                  </a>
+                  <ul class="submenu" aria-label="About Us submenu">
                     <li><a href="about_us.html">About Us Overview</a></li>
                     <li><a href="bod.html">Board of Directors</a></li>
-                </ul>
+                  </ul>
                 </li>
 
                 <li><a id="contact" href="contact_us.html">Contact Us</a></li>
-            </ul>
+              </ul>
             </nav>
+          </div>
         </div>
-
-        </div>
-    </div>
+      </div>
     </header>
-        
-        <main class="page-content">
 
-            <!-- HERO -->
-            <section class="page-hero">
-                <div class="container">
-                <div class="hero-inner">
-                    <h1>Events</h1>
-                    <p>
-                    OFCS events bring our community together through culture, service, and connection.
-                    Dates will be announced soon—follow our Facebook page for the latest updates.
-                    </p>
+    <main class="page-content">
+      <!-- HERO -->
+      <section class="page-hero">
+        <div class="container">
+          <div class="hero-inner">
+            <h1>Events</h1>
+            <p>
+              OFCS events bring our community together through culture, service, and connection.
+              Dates will be announced soon—follow our Facebook page for the latest updates.
+            </p>
 
-                    <div class="hero-actions">
-                    <a class="btn primary" href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener">
-                        View Facebook Updates
-                    </a>
-                    <a class="btn secondary" href="contact_us.html">Contact Us</a>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- CALENDAR INTRO -->
-            <section class="section">
-                <div class="container">
-                <div class="calendar-header">
-                    <h2 class="section-title">OFCS 2026 At-a-Glance Calendar</h2>
-                    <p class="section-subtitle">
-                    <strong>Dates to be announced.</strong> Program details may change based on schedules, partnerships, and community needs.
-                    </p>
-
-                    <div class="calendar-actions">
-                    <a class="btn secondary" href="news.html">See announcements</a>
-                    <a class="btn secondary" href="services.html">Explore programs</a>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- MONTHS: SINGLE COLUMN, BORDERED -->
-            <section class="section">
-                <div class="container">
-
-                <div class="months">
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>January</h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li>
-                        <div class="event-title"><strong>New Year’s Salu-Salo &amp; Vision Night</strong> <span class="event-meta">(Mid-January – Date TBA)</span></div>
-                        <ul class="event-sublist">
-                            <li>Community gathering and 2026 program overview</li>
-                            <li>Cultural performances and volunteer sign-ups</li>
-                        </ul>
-                        </li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>February <span class="pill">Filipino Family Wellness Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li>
-                        <div class="event-title"><strong>Family Wellness &amp; Information Session</strong></div>
-                        <ul class="event-sublist">
-                            <li>Financial literacy, PR pathways, housing, and taxes</li>
-                        </ul>
-                        </li>
-                        <li><div class="event-title"><strong>Valentine’s-Themed Seniors or Couples Activity</strong></div></li>
-                        <li>
-                        <div class="event-title"><strong>One World Festival Participation</strong> <span class="tag confirmed">Confirmed</span></div>
-                        </li>
-                        <li><div class="event-title"><strong>Taste of Home Cultural Gathering</strong></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>March <span class="pill">Youth &amp; Young Professionals Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Career Talks &amp; Industry Panels</strong></div></li>
-                        <li><div class="event-title"><strong>Résumé &amp; Job-Readiness Workshops</strong></div></li>
-                        <li><div class="event-title"><strong>Mentorship Night</strong></div></li>
-                        <li><div class="event-title"><strong>Asian Heritage Month Planning Participation</strong></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>April <span class="pill">Health &amp; Well-Being Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Mental Health Talk</strong> <span class="event-meta">(Tagalog &amp; English)</span></div></li>
-                        <li><div class="event-title"><strong>Community Fitness Sessions</strong> <span class="event-meta">(Zumba/Dance)</span></div></li>
-                        <li><div class="event-title"><strong>Easter Family Activity or Children’s Workshop</strong></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>May <span class="pill">Asian Heritage Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Arts, Crafts &amp; Heritage Activities</strong></div></li>
-                        <li><div class="event-title"><strong>Film or Cultural Movie Night</strong></div></li>
-                        <li><div class="event-title"><strong>OFCS Signature Event</strong> <span class="event-meta">(Panel, Cultural Night, or Exhibit)</span></div></li>
-                        <li><div class="event-title"><strong>Youth &amp; Young Professionals Programming</strong> <span class="event-meta">(Select Events)</span></div></li>
-                        <li><div class="event-title"><strong>Community Collaborations with OFCS Branding</strong></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>June <span class="pill">Philippine Independence Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Philippine Independence Day Celebration</strong> <span class="tag flagship">Flagship</span></div></li>
-                        <li><div class="event-title"><strong>Cultural Performances &amp; Heritage Booths</strong></div></li>
-                        <li><div class="event-title"><strong>Youth &amp; Storytelling Features</strong></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>July</h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Canada Day Celebrations</strong></div></li>
-                        <li><div class="event-title"><strong>Kelowna Folkfest Participation</strong> <span class="event-meta">(Food Booth &amp; Performances)</span></div></li>
-                        <li><div class="event-title"><strong>OFCS Volunteer Appreciation BBQ</strong></div></li>
-                        <li><div class="event-title"><strong>Youth &amp; Young Professionals Programming</strong> <span class="event-meta">(Select Events)</span></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>August <span class="pill">Sports &amp; Family Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Community Sports Activities</strong> <span class="event-meta">(Basketball, Volleyball, Badminton)</span></div></li>
-                        <li><div class="event-title"><strong>Family Fun Day</strong></div></li>
-                        <li><div class="event-title"><strong>Pilot Youth Sports Clinic</strong> <span class="event-meta">(1-Day Program)</span></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>September <span class="pill">Newcomer Welcome Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Newcomer Orientation &amp; Welcome Session</strong></div></li>
-                        <li><div class="event-title"><strong>Connections to Services, Employers &amp; Schools</strong></div></li>
-                        <li><div class="event-title"><strong>Multicultural Festival Participation</strong></div></li>
-                        <li><div class="event-title"><strong>Youth &amp; Young Professionals Programming</strong></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>October <span class="pill">Seniors &amp; Intergenerational Month</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Seniors Social Activities</strong> <span class="event-meta">(Bingo, Storytelling)</span></div></li>
-                        <li><div class="event-title"><strong>Intergenerational Cultural Exchange</strong></div></li>
-                        <li><div class="event-title"><strong>Colourfall Bingo</strong> <span class="event-meta">(Continuation)</span></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>November <span class="pill">Remembrance &amp; Gratitude</span></h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>Remembrance Day Participation</strong></div></li>
-                        <li><div class="event-title"><strong>Charity or Donation Drive</strong> <span class="event-meta">(Local or Philippines-Focused)</span></div></li>
-                        <li><div class="event-title"><strong>Christmas Events Planning &amp; Preparation</strong></div></li>
-                    </ul>
-                    </article>
-
-                    <article class="month-block">
-                    <header class="month-header">
-                        <h3>December</h3>
-                        <span class="month-note">Dates TBA</span>
-                    </header>
-                    <ul class="event-list">
-                        <li><div class="event-title"><strong>OFCS Christmas Gathering</strong></div></li>
-                        <li><div class="event-title"><strong>Simbang Gabi Participation</strong></div></li>
-                        <li><div class="event-title"><strong>Year-End Review &amp; AGM Preparation</strong></div></li>
-                    </ul>
-                    </article>
-
-                </div>
-
-                <!-- BOTTOM CALLOUT -->
-                <div class="events-callout">
-                    <p>
-                    Want the most up-to-date details? Facebook will always have the latest announcements.
-                    </p>
-                    <a class="btn primary" href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener">
-                    Open Facebook
-                    </a>
-                </div>
-
-                </div>
-            </section>
-
-            </main>
-
-
-        
-
-        <footer class="site-footer">
-            <div class="container footer-grid">
-                <!-- Column 1: About -->
-                <div class="footer-col">
-                <h3 class="footer-title">Okanagan Filipino Canadians</h3>
-                <p class="footer-text">
-                    Building community through culture, events, and support for Filipino Canadians in the Okanagan.
-                </p>
-
-                <p class="footer-landack">
-                    We respectfully acknowledge that we are on the traditional, ancestral, and unceded territory of the Syilx Okanagan Nation.
-                </p>
-                <p class="footer-reinforce">
-                    Rooted in Culture. United in Community. Serving Filipino-Canadians in the Okanagan for over 30 years.
-                </p>
-                </div>
-
-                <!-- Column 2: Quick Links -->
-                <div class="footer-col">
-                <h3 class="footer-title">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="contact_us.html">Contact Us</a></li>
-                </ul>
-                </div>
-
-                <!-- Column 3: Contact -->
-                <div class="footer-col">
-                <h3 class="footer-title">Contact</h3>
-
-                <ul class="footer-contact">
-                    <li>
-                    <span class="contact-label">Email:</span>
-                    <a href="mailto:info@ofcs.ca">info@ofcs.ca</a>
-                    </li>
-                    <li>
-                    <span class="contact-label">Phone:</span>
-                    <a href="">Coming Soon</a>
-                    </li>
-                    <li>
-                    <span class="contact-label">Location:</span>
-                    <span>Kelowna, BC</span>
-                    </li>
-                </ul>
-
-                <div class="footer-socials" aria-label="Social media links">
-                    <a href="#" aria-label="Facebook">
-                    <img src="assets/images/facebook.png" alt="Facebook" width="18" height="18">
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                    <img src="assets/images/instagram.png" alt="Instagram" width="18" height="18">
-                    </a>
-                </div>
-                </div>
+            <div class="hero-actions">
+              <a
+                class="btn primary"
+                href="https://www.facebook.com/groups/okanaganfilipinoclub"
+                target="_blank"
+                rel="noopener"
+              >
+                View Facebook Updates
+              </a>
+              <a class="btn secondary" href="contact_us.html">Contact Us</a>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="footer-bottom">
-                <div class="container footer-bottom-inner">
-                <p>© <span id="year"></span> Okanagan Filipino Canadians. All rights reserved.</p>
-                <p class="footer-small-links">
-                    <a href="privacy.html">Privacy</a>
-                    <span>·</span>
-                    <a href="terms.html">Terms</a>
-                </p>
-                </div>
+      <!-- CALENDAR INTRO -->
+      <section class="section">
+        <div class="container">
+          <div class="calendar-header">
+            <h2 class="section-title">OFCS 2026 At-a-Glance Calendar</h2>
+            <p class="section-subtitle">
+              <strong>Dates to be announced.</strong> Program details may change based on schedules, partnerships,
+              and community needs.
+            </p>
+
+            <div class="calendar-actions">
+              <a class="btn secondary" href="news.html">See announcements</a>
+              <a class="btn secondary" href="services.html">Explore programs</a>
             </div>
-        </footer>
-                <script>
-                    const header = document.querySelector(".main-header");
-                    const btn = document.querySelector(".menu-toggle");
+          </div>
+        </div>
+      </section>
 
-                    btn.addEventListener("click", () => {
-                        const open = header.classList.toggle("menu-open");
-                        btn.setAttribute("aria-expanded", open ? "true" : "false");
-                    });
+      <!-- MONTHS -->
+      <section class="section">
+        <div class="container">
+          <div class="months">
+            <!-- JAN -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>January</h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
 
-                    // Close menu when going back to desktop size
-                    window.addEventListener("resize", () => {
-                        if (window.innerWidth > 900) {
-                        header.classList.remove("menu-open");
-                        btn.setAttribute("aria-expanded", "false");
+                  <ul class="event-list">
+                    <li>
+                      <div class="event-title">
+                        <strong>New Year’s Salu-Salo &amp; Vision Night</strong>
+                        <span class="event-meta">(Mid-January – Date TBA)</span>
+                      </div>
+                      <ul class="event-sublist">
+                        <li>Community gathering and 2026 program overview</li>
+                        <li>Cultural performances and volunteer sign-ups</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
 
-                        // Also close any open submenus
-                        document.querySelectorAll(".has-submenu.submenu-open").forEach(li => li.classList.remove("submenu-open"));
-                        document.querySelectorAll(".submenu-toggle").forEach(t => t.setAttribute("aria-expanded", "false"));
-                        }
-                    });
+                <aside class="month-media" aria-label="January photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/jan.jpeg"
+                    alt="OFCS January events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
 
-                    // Mobile submenu toggles
-                    document.querySelectorAll(".submenu-toggle").forEach(toggle => {
-                        toggle.addEventListener("click", () => {
-                        const li = toggle.closest(".has-submenu");
-                        const open = li.classList.toggle("submenu-open");
-                        toggle.setAttribute("aria-expanded", open ? "true" : "false");
-                        });
-                    });
-        </script>
-    </body>    
+            <!-- FEB -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>February <span class="pill">Filipino Family Wellness Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li>
+                      <div class="event-title"><strong>Family Wellness &amp; Information Session</strong></div>
+                      <ul class="event-sublist">
+                        <li>Financial literacy, PR pathways, housing, and taxes</li>
+                      </ul>
+                    </li>
+                    <li><div class="event-title"><strong>Valentine’s-Themed Seniors or Couples Activity</strong></div></li>
+                    <li>
+                      <div class="event-title">
+                        <strong>One World Festival Participation</strong>
+                        <span class="tag confirmed">Confirmed</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>Taste of Home Cultural Gathering</strong>
+                    <span class="tag confirmed">Confirmed</span>
+                    </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="February photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/feb.jpeg"
+                    alt="OFCS February events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- MAR -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>March <span class="pill">Youth &amp; Young Professionals Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li><div class="event-title"><strong>Career Talks &amp; Industry Panels</strong></div></li>
+                    <li><div class="event-title"><strong>Résumé &amp; Job-Readiness Workshops</strong></div></li>
+                    <li><div class="event-title"><strong>Mentorship Night</strong></div></li>
+                    <li><div class="event-title"><strong>Asian Heritage Month Planning Participation</strong></div></li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="March photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/march.png"
+                    alt="OFCS March events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- APR -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>April <span class="pill">Health &amp; Well-Being Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li>
+                      <div class="event-title">
+                        <strong>Mental Health Talk</strong>
+                        <span class="event-meta">(Tagalog &amp; English)</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="event-title">
+                        <strong>Community Fitness Sessions</strong>
+                        <span class="event-meta">(Zumba/Dance)</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>Easter Family Activity or Children’s Workshop</strong></div></li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="April photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/april.png"
+                    alt="OFCS April events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- MAY -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>May <span class="pill">Asian Heritage Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li><div class="event-title"><strong>Arts, Crafts &amp; Heritage Activities</strong></div></li>
+                    <li><div class="event-title"><strong>Film or Cultural Movie Night</strong></div></li>
+                    <li>
+                      <div class="event-title">
+                        <strong>OFCS Signature Event</strong>
+                        <span class="event-meta">(Panel, Cultural Night, or Exhibit)</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="event-title">
+                        <strong>Youth &amp; Young Professionals Programming</strong>
+                        <span class="event-meta">(Career Talks & Industry Panels, Résumé & Job-Readiness Workshops)</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>Community Collaborations with OFCS Branding</strong></div></li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="May photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/may.png"
+                    alt="OFCS May events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- JUN -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>June <span class="pill">Philippine Independence Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li>
+                      <div class="event-title">
+                        <strong>Philippine Independence Day Celebration</strong>
+                        <span class="tag flagship">Flagship</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>Cultural Performances &amp; Heritage Booths</strong></div></li>
+                    <li><div class="event-title"><strong>Youth &amp; Storytelling Features</strong></div></li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="June photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/june.PNG"
+                    alt="OFCS June events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- JUL -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>July</h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li><div class="event-title"><strong>Canada Day Celebrations</strong></div></li>
+                    <li>
+                      <div class="event-title">
+                        <strong>Kelowna Folkfest Participation</strong>
+                        <span class="event-meta">(Food Booth &amp; Performances)</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>OFCS Volunteer Appreciation BBQ</strong></div></li>
+                    <li>
+                      <div class="event-title">
+                        <strong>Youth &amp; Young Professionals Programming</strong>
+                        <span class="event-meta">(Career Talks & Industry Panels, Résumé & Job-Readiness Workshops)</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="July photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/july.png"
+                    alt="OFCS July events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- AUG -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>August <span class="pill">Sports &amp; Family Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li>
+                      <div class="event-title">
+                        <strong>Community Sports Activities</strong>
+                        <span class="event-meta">(Basketball, Volleyball, Badminton)</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>Family Fun Day</strong></div></li>
+                    <li>
+                      <div class="event-title">
+                        <strong>Pilot Youth Sports Clinic</strong>
+                        <span class="event-meta">(1-Day Program)</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="August photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/aug.jpeg"
+                    alt="OFCS August events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- SEP -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>September <span class="pill">Newcomer Welcome Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li><div class="event-title"><strong>Newcomer Orientation &amp; Welcome Session</strong></div></li>
+                    <li><div class="event-title"><strong>Connections to Services, Employers &amp; Schools</strong></div></li>
+                    <li><div class="event-title"><strong>Multicultural Festival Participation</strong></div></li>
+                    <li><div class="event-title"><strong>Youth &amp; Young Professionals Programming</strong></div></li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="September photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/sept.png"
+                    alt="OFCS September events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- OCT -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>October <span class="pill">Seniors &amp; Intergenerational Month</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li>
+                      <div class="event-title">
+                        <strong>Seniors Social Activities</strong>
+                        <span class="event-meta">(Bingo, Storytelling)</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>Intergenerational Cultural Exchange</strong></div></li>
+                    <li>
+                      <div class="event-title">
+                        <strong>Colourfall Bingo</strong>
+                        <span class="event-meta">(Continuation)</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="October photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/oct.PNG"
+                    alt="OFCS October events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- NOV -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>November <span class="pill">Remembrance &amp; Gratitude</span></h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li><div class="event-title"><strong>Remembrance Day Participation</strong></div></li>
+                    <li>
+                      <div class="event-title">
+                        <strong>Charity or Donation Drive</strong>
+                        <span class="event-meta">(Local or Philippines-Focused)</span>
+                      </div>
+                    </li>
+                    <li><div class="event-title"><strong>Christmas Events Planning &amp; Preparation</strong></div></li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="November photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/nov.jpg"
+                    alt="OFCS November events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+
+            <!-- DEC -->
+            <article class="month-block">
+              <div class="month-grid">
+                <div class="month-content">
+                  <header class="month-header">
+                    <h3>December</h3>
+                    <span class="month-note">Dates TBA</span>
+                  </header>
+
+                  <ul class="event-list">
+                    <li><div class="event-title"><strong>OFCS Christmas Gathering</strong></div></li>
+                    <li><div class="event-title"><strong>Simbang Gabi Participation</strong></div></li>
+                    <li><div class="event-title"><strong>Year-End Review &amp; AGM Preparation</strong></div></li>
+                  </ul>
+                </div>
+
+                <aside class="month-media" aria-label="December photo">
+                  <img
+                    class="month-photo"
+                    src="assets/images/dec.jpeg"
+                    alt="OFCS December events"
+                    loading="lazy"
+                  />
+                </aside>
+              </div>
+            </article>
+          </div>
+
+          <!-- BOTTOM CALLOUT -->
+          <div class="events-callout">
+            <p>Want the most up-to-date details? Facebook will always have the latest announcements.</p>
+            <a
+              class="btn primary"
+              href="https://www.facebook.com/groups/okanaganfilipinoclub"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Facebook
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-title">Okanagan Filipino Canadians</h3>
+          <p class="footer-text">
+            Building community through culture, events, and support for Filipino Canadians in the Okanagan.
+          </p>
+
+          <p class="footer-landack">
+            We respectfully acknowledge that we are on the traditional, ancestral, and unceded territory of the Syilx
+            Okanagan Nation.
+          </p>
+          <p class="footer-reinforce">
+            Rooted in Culture. United in Community. Serving Filipino-Canadians in the Okanagan for over 30 years.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Contact</h3>
+
+          <ul class="footer-contact">
+            <li>
+              <span class="contact-label">Email:</span>
+              <a href="mailto:info@ofcs.ca">info@ofcs.ca</a>
+            </li>
+            <li>
+              <span class="contact-label">Phone:</span>
+              <a href="">Coming Soon</a>
+            </li>
+            <li>
+              <span class="contact-label">Location:</span>
+              <span>Kelowna, BC</span>
+            </li>
+          </ul>
+
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Facebook">
+              <img src="assets/images/facebook.png" alt="Facebook" width="18" height="18" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img src="assets/images/instagram.png" alt="Instagram" width="18" height="18" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© <span id="year"></span> Okanagan Filipino Canadians. All rights reserved.</p>
+          <p class="footer-small-links">
+            <a href="privacy.html">Privacy</a>
+            <span>·</span>
+            <a href="terms.html">Terms</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.querySelector(".main-header");
+      const btn = document.querySelector(".menu-toggle");
+
+      btn.addEventListener("click", () => {
+        const open = header.classList.toggle("menu-open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+          header.classList.remove("menu-open");
+          btn.setAttribute("aria-expanded", "false");
+
+          document
+            .querySelectorAll(".has-submenu.submenu-open")
+            .forEach((li) => li.classList.remove("submenu-open"));
+          document
+            .querySelectorAll(".submenu-toggle")
+            .forEach((t) => t.setAttribute("aria-expanded", "false"));
+        }
+      });
+
+      document.querySelectorAll(".submenu-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const li = toggle.closest(".has-submenu");
+          const open = li.classList.toggle("submenu-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      });
+    </script>
+  </body>
 </html>
-
-
