@@ -24,68 +24,274 @@
 
     </head>
     <body>
-        <header>
-            
-                <div class="top-bar">
-                    <div class="container">
-                    <div class = "top-left">
-                        <img class="info" src="assets/images/mail.png"> <p class="info-text">info@email.ca</p>
-                        <p class="info-text">|</p>
-                        <img class="info" src="assets/images/phone.png"> <p class="info-text">250-555-5555</p>
-                    </div>
+    <header>
+    <div class="top-bar">
+        <div class="container">
+        <div class="top-left">
+            <img class="info" src="assets/images/mail.png"> <p class="info-text">info@ofcs.ca</p>
+            <p class="info-text">|</p>
+            <img class="info" src="assets/images/phone.png"> <p class="info-text">Coming Soon</p>
+        </div>
 
-                    <div class = "top-right">
-                        <a href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener"><img class="socials" src="assets/images/facebook.png"></a>
-                        <a href="#"><img class="socials" src="assets/images/instagram.png"></a>
-                    </div>
-                    </div>
-                </div>
-                
-                <hr class="header-divider">
+        <div class="top-right">
+            <a href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener">
+            <img class="socials" src="assets/images/facebook.png">
+            </a>
+            <a href="#"><img class="socials" src="assets/images/instagram.png"></a>
+        </div>
+        </div>
+    </div>
 
-                <div class="main-header">
-                    <div class="container">
-                    <a href="index.html"><img class="logo" src="assets/images/logo.png"></a>
-                    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
-                        ☰ Menu
-                    </button>
-                        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
-                        <ul class="mobile-nav-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="about_us.html">About Us</a></li>
-                            <li><a id="contact" href="contact_us.html">Contact Us</a></li>
-                        </ul>
-                        </nav>
-                        <div class="nav-bar">
-                        <nav>
-                            <ul class="nav-list">
-                                <li><a class="active"href="index.html">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="events.html">Events</a></li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="about_us.html">About Us</a></li>
-                                <li><a id = "contact" href="contact_us.html">Contact Us</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    </div>
-                </div>
-            
-        </header>
+    <hr class="header-divider">
+
+    <div class="main-header">
+        <div class="container">
+        <a href="index.html"><img class="logo" src="assets/images/logo.png"></a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+            ☰ Menu
+        </button>
+
+        <!-- MOBILE NAV -->
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+            <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+
+            <!-- About Us + dropdown (mobile) -->
+            <li class="has-submenu">
+                <button class="mobile-submenu-toggle submenu-toggle" type="button" aria-expanded="false">
+                About Us
+                <span class="chev" aria-hidden="true">▾</span>
+                </button>
+                <ul class="submenu" aria-label="About Us submenu">
+                <li><a href="about_us.html">About Us Overview</a></li>
+                <li><a href="bod.html">Board of Directors</a></li>
+                </ul>
+            </li>
+
+            <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- DESKTOP NAV -->
+        <div class="nav-bar">
+            <nav aria-label="Primary">
+            <ul class="nav-list">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+
+                <!-- About Us + dropdown (desktop hover) -->
+                <li class="has-submenu">
+                <a href="about_us.html" aria-haspopup="true" aria-expanded="false">
+                    About Us <span class="chev" aria-hidden="true">▾</span>
+                </a>
+                <ul class="submenu" aria-label="About Us submenu">
+                    <li><a href="about_us.html">About Us Overview</a></li>
+                    <li><a href="bod.html">Board of Directors</a></li>
+                </ul>
+                </li>
+
+                <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+            </ul>
+            </nav>
+        </div>
+
+        </div>
+    </div>
+    </header>
         
-            <main class = "page-content">
-                <section class="home-gallery" aria-label="Featured updates">
-                    <div class="gallery-track" id="galleryTrack"></div>
+        <main class="page-content">
 
-                        <button class="gallery-btn prev" type="button" aria-label="Previous slide">‹</button>
-                        <button class="gallery-btn next" type="button" aria-label="Next slide">›</button>
+        <!-- NEW: Hero intro (above the fold) -->
+        <section class="intro-hero" aria-label="OFCS introduction">
+            <div class="container intro-hero-inner">
+            <div class="intro-hero-copy">
+                <p class="intro-eyebrow">Okanagan Filipino-Canadian Society</p>
+                <h1>Rooted in Culture. United in Community.</h1>
+                <p class="intro-subheading">
+                Celebrating 30 years of serving Filipino-Canadians in the Okanagan, the Okanagan Filipino-Canadian Society (OFCS)
+                connects people through culture, service, and bayanihan—building a strong, inclusive community for generations past,
+                present, and future.
+                </p>
 
-                    <div class="gallery-dots" id="galleryDots" aria-label="Slide navigation"></div>
-                </section>
-            </main>
+                <div class="intro-cta">
+                <a class="btn btn-primary" href="events.html">Explore Our 2026 Programs</a>
+                <a class="btn btn-secondary" href="contact_us.html">Get Involved / Volunteer</a>
+                <a class="btn btn-ghost" href="about_us.html">Become a Member</a>
+                </div>
+            </div>
+
+            <div class="intro-hero-side" aria-label="Milestone badge">
+                <div class="milestone-card">
+                <div class="since-badge" aria-label="Since 1994 badge">Since 1994</div>
+                <p class="milestone-number">30</p>
+                <p class="milestone-label">Years of Community</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- NEW: Full-width milestone highlight strip (below hero) -->
+        <section class="milestone-strip" aria-label="30-year milestone highlight">
+            <div class="container milestone-strip-inner">
+            <div class="milestone-strip-copy">
+                <h2>30 Years of Community, Culture, and Connection</h2>
+                <p>
+                For three decades, OFCS has proudly supported Filipino-Canadians across the Okanagan—celebrating culture,
+                welcoming newcomers, empowering youth, and fostering lifelong community connections through service and shared heritage.
+                </p>
+            </div>
+            <a class="milestone-link" href="about_us.html">Our Story &amp; History →</a>
+            </div>
+        </section>
+
+        <!-- EXISTING: Gallery + Announcements (unchanged) -->
+        <section class="home-hero">
+            <div class="container home-hero-grid">
+
+            <!-- LEFT: Gallery (your existing slider) -->
+            <section class="home-gallery" aria-label="Featured updates">
+                <div class="gallery-track" id="galleryTrack"></div>
+
+                <button class="gallery-btn prev" type="button" aria-label="Previous slide">‹</button>
+                <button class="gallery-btn next" type="button" aria-label="Next slide">›</button>
+
+                <div class="gallery-dots" id="galleryDots" aria-label="Slide navigation"></div>
+            </section>
+
+            <!-- RIGHT: Announcements -->
+            <aside class="announcements" aria-label="Announcements">
+                <div class="announcements-header">
+                <h2>Announcements</h2>
+                <div class="announcements-date" id="todayDate"></div>
+                </div>
+
+                <ul class="announcements-list">
+                <li class="announcement">
+                    <div class="a-date">Jan 18 2026</div>
+                    <div class="a-content">
+                        <a class="a-title" href="news.html">Sinulog Festival Celebration</a>
+                        <p class="a-desc">
+                        OFCS invites the community to celebrate Sinulog, a vibrant cultural and religious festival honouring the Santo Niño, featuring music, dance, and community participation at Corpus Christi Parish.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="announcement">
+                   <div class="a-date">Dec 15–23, 2025</div>
+                    <div class="a-content">
+                        <a class="a-title" href="news.html">Simbang Gabi at Corpus Christi Parish</a>
+                        <p class="a-desc">
+                       The Filipino Catholic community in Kelowna gathered nightly for Simbang Gabi, a cherished nine-day devotional Mass leading up to Christmas, celebrated in faith, music, and fellowship.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="announcement">
+                    <div class="a-date">Dec 5 2025</div>
+                        <div class="a-content">
+                            <a class="a-title" href="news.html">OFCS Christmas Party</a>
+                            <p class="a-desc">
+                            The Okanagan Filipino Canadian Society hosted its annual Christmas Party, bringing together families, volunteers, and community members for an evening of celebration, connection, and Filipino holiday traditions.
+                            </p>
+                        </div>
+                </li>
+                </ul>
+
+                <a class="announcements-more" href="news.html">View all announcements →</a>
+            </aside>
+
+            </div>
+        </section>
+
+        <!-- NEW: Program preview section (mid-homepage) -->
+        <section class="program-preview" aria-label="2026 program preview">
+            <div class="container program-preview-inner">
+            <div class="program-preview-head">
+                <h2>What 2026 Looks Like</h2>
+                <p>
+                Our 2026 programming reflects the heart of OFCS—culture, youth, family, wellness, and community. While dates will be
+                announced soon and programs may evolve, here’s an at-a-glance look at what the year ahead has in store.
+                </p>
+            </div>
+
+            <div class="program-cards" role="list">
+                <div class="program-card" role="listitem">
+                <h3>Culture &amp; Heritage</h3>
+                <p>Community celebrations, heritage showcases, and events that keep our traditions thriving.</p>
+                </div>
+
+                <div class="program-card" role="listitem">
+                <h3>Youth &amp; Leadership</h3>
+                <p>Youth programming and mentorship that builds confidence, skills, and community pride.</p>
+                </div>
+
+                <div class="program-card" role="listitem">
+                <h3>Family &amp; Community</h3>
+                <p>Gatherings and initiatives that bring families together and strengthen local connections.</p>
+                </div>
+
+                <div class="program-card" role="listitem">
+                <h3>Wellness &amp; Support</h3>
+                <p>Workshops and resources that support wellbeing, inclusion, and a sense of belonging.</p>
+                </div>
+            </div>
+
+            <div class="program-preview-actions">
+                <a class="btn btn-primary" href="events.html">View 2026 At-a-Glance Calendar</a>
+            </div>
+            </div>
+        </section>
+
+<!-- Media Releases -->
+<section class="media-release" aria-label="Media releases">
+  <div class="container media-release-inner">
+    <div class="media-release-head">
+      <h2>Media Releases</h2>
+    </div>
+
+    <article class="media-card">
+      <div class="media-video">
+        <iframe
+          src="https://www.youtube.com/embed/mBHXysyosGY"
+          title="OFCS President Interviewed by OMNI TV"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="media-content">
+        <h3>OFCS President Interviewed by OMNI TV</h3>
+        <p>
+          Jordg Lemita, President of the Okanagan Filipino-Canadian Society, was interviewed by
+          <strong>OMNI TV</strong> in Vancouver, sharing perspectives on the ongoing discussions
+          surrounding the proposed Filipino Cultural Centre in the Lower Mainland.
+          The interview emphasized unity, collaboration, and inclusive leadership within
+          the Filipino-Canadian community.
+        </p>
+
+        <a
+          class="btn btn-primary"
+          href="https://www.youtube.com/watch?v=mBHXysyosGY"
+          target="_blank"
+          rel="noopener"
+        >
+          Watch on YouTube
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+        </main>
+
             
 
         <footer class="site-footer">
@@ -100,6 +306,11 @@
                 <p class="footer-landack">
                     We respectfully acknowledge that we are on the traditional, ancestral, and unceded territory of the Syilx Okanagan Nation.
                 </p>
+
+                <p class="footer-reinforce">
+                    Rooted in Culture. United in Community. Serving Filipino-Canadians in the Okanagan for over 30 years.
+                </p>
+
                 </div>
 
                 <!-- Column 2: Quick Links -->
@@ -122,11 +333,11 @@
                 <ul class="footer-contact">
                     <li>
                     <span class="contact-label">Email:</span>
-                    <a href="mailto:info@email.ca">info@email.ca</a>
+                    <a href="mailto:info@ofcs.ca">info@ofcs.ca</a>
                     </li>
                     <li>
                     <span class="contact-label">Phone:</span>
-                    <a href="tel:+12505555555">250-555-5555</a>
+                    <a href="">Coming Soon</a>
                     </li>
                     <li>
                     <span class="contact-label">Location:</span>
@@ -157,22 +368,41 @@
             </div>
         </footer>
         <script src="assets/js/gallery.js"></script>
+                <script>
+                    const header = document.querySelector(".main-header");
+                    const btn = document.querySelector(".menu-toggle");
+
+                    btn.addEventListener("click", () => {
+                        const open = header.classList.toggle("menu-open");
+                        btn.setAttribute("aria-expanded", open ? "true" : "false");
+                    });
+
+                    // Close menu when going back to desktop size
+                    window.addEventListener("resize", () => {
+                        if (window.innerWidth > 900) {
+                        header.classList.remove("menu-open");
+                        btn.setAttribute("aria-expanded", "false");
+
+                        // Also close any open submenus
+                        document.querySelectorAll(".has-submenu.submenu-open").forEach(li => li.classList.remove("submenu-open"));
+                        document.querySelectorAll(".submenu-toggle").forEach(t => t.setAttribute("aria-expanded", "false"));
+                        }
+                    });
+
+                    // Mobile submenu toggles
+                    document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+                        toggle.addEventListener("click", () => {
+                        const li = toggle.closest(".has-submenu");
+                        const open = li.classList.toggle("submenu-open");
+                        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+                        });
+                    });
+        </script>
         <script>
-            const header = document.querySelector(".main-header");
-            const btn = document.querySelector(".menu-toggle");
-
-            btn.addEventListener("click", () => {
-                const open = header.classList.toggle("menu-open");
-                btn.setAttribute("aria-expanded", open ? "true" : "false");
-            });
-
-            // Close menu when going back to desktop size
-            window.addEventListener("resize", () => {
-                if (window.innerWidth > 900) {
-                header.classList.remove("menu-open");
-                btn.setAttribute("aria-expanded", "false");
-                }
-            });
+            const el = document.getElementById("todayDate");
+            if (el) {
+                el.textContent = new Date().toLocaleDateString(undefined, { weekday:"long", year:"numeric", month:"long", day:"numeric" });
+            }
         </script>
     </body>
 </html>

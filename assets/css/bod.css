@@ -1,0 +1,159 @@
+/* =========================
+   Board of Directors
+========================= */
+.board {
+  margin: 2.25rem 0 0;
+}
+
+.board-group {
+  margin-top: 1.25rem;
+}
+
+.board-group-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: #091024;
+  letter-spacing: -0.01em;
+}
+
+/* Grid for members */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Member card */
+.member-card {
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(10, 20, 40, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Featured President (full width, clean + intentional) */
+.member-card--featured {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 0;
+  margin-top: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.member-card--featured .member-photo {
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.member-card--featured .member-body {
+  padding: 1.25rem;
+}
+
+/* Image */
+.photo-wrap {
+  aspect-ratio: 4 / 5;   /* professional portrait ratio */
+  overflow: hidden;
+  background: #f3f5f9;
+}
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* Body */
+.member-body {
+  padding: 1.1rem 1.1rem 1.2rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+/* ROLE CHIP (fixes stretching + keeps consistent alignment) */
+.member-role {
+  justify-self: start;              /* prevents stretching */
+  display: inline-flex;             /* chip sizes to content */
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(35, 64, 124, 0.18);
+  background: #f3f5f9;
+  color: #23407c;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  line-height: 1;                   /* keeps height consistent */
+  white-space: nowrap;              /* stops wrap causing weird height */
+}
+
+.member-name {
+  margin: 0;
+  color: #091024;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.member-bio {
+  margin: 0;
+  color: #39455f;
+  line-height: 1.65;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+/* 2 columns */
+@media (max-width: 1100px) {
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Keep same look, just slightly more forgiving crop */
+  .photo-wrap {
+    aspect-ratio: 4 / 5;       /* keep same shape */
+  }
+
+  .member-photo {
+    object-position: 50% 18%;
+  }
+}
+
+/* Featured president breakpoint */
+@media (max-width: 900px) {
+  .member-card--featured {
+    grid-template-columns: 1fr;
+  }
+
+  /* Give the featured image a strong hero feel on mobile */
+  .member-card--featured .photo-wrap {
+    aspect-ratio: 16 / 10;     /* wide hero crop looks intentional */
+  }
+
+  .member-card--featured .member-photo {
+    object-position: 50% 18%;
+  }
+}
+
+/* 1 column */
+@media (max-width: 560px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Slightly taller on phones so faces aren’t cramped */
+  .photo-wrap {
+    aspect-ratio: 3 / 4;
+  }
+
+  .member-photo {
+    object-position: 50% 16%;
+  }
+}
