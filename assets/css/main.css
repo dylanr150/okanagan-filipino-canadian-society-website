@@ -272,6 +272,110 @@ html, body {
   overflow-x: hidden;
 }
 
+/* =========================================================
+   DROPDOWN (DESKTOP + MOBILE)
+========================================================= */
+
+.has-submenu {
+  position: relative;
+}
+
+/* Shared submenu styling */
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem;
+  background: #ffffff;
+  border-radius: 14px;
+  border: #e7e7e7 1px solid;
+}
+
+/* Desktop dropdown positioning */
+.nav-list .has-submenu > .submenu {
+  position: absolute;
+  left: 0;
+  min-width: 240px;
+  display: none;
+  z-index: 50;
+}
+
+/* Show on hover + keyboard focus */
+.nav-list .has-submenu:hover > .submenu,
+.nav-list .has-submenu:focus-within > .submenu {
+  display: block;
+}
+
+/* Submenu links */
+.submenu a {
+  display: block;
+  padding: 0.65rem 0.8rem;
+  border-radius: 10px;
+  color: #23407c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background: #f3f5f9;
+}
+
+/* Little chevron */
+.chev {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+/* =========================================================
+   MOBILE SUBMENU (tap to open)
+========================================================= */
+
+.mobile-nav .has-submenu > .submenu {
+  display: none;               /* closed by default */
+  border: 1px solid #e7e7e7;
+  border-radius: 14px;
+  box-shadow: none;            /* cleaner inside mobile menu */
+  padding: 0.35rem;
+  margin-top: 0.25rem;
+  background: #ffffff;
+}
+
+.main-header.menu-open .has-submenu.submenu-open > .submenu {
+  display: block;
+}
+
+.mobile-submenu-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  color: #23407c;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.mobile-submenu-toggle:hover {
+  background: #f2f2f2;
+}
+
+/* Rotate chevron when open */
+.has-submenu.submenu-open .mobile-submenu-toggle .chev {
+  transform: rotate(180deg);
+}
+
+
 
 
 /* @media (max-width: 48rem) {

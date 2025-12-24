@@ -22,57 +22,86 @@
         <link rel="preload" as="image" href="assets/images/instagram.png">
     </head>
     <body>
-        <header>
-            
-                <div class="top-bar">
-                    <div class="container">
-                    <div class = "top-left">
-                        <img class="info" src="assets/images/mail.png"> <p class="info-text">info@ofcs.ca</p>
-                        <p class="info-text">|</p>
-                        <img class="info" src="assets/images/phone.png"> <p class="info-text">Coming Soon</p>
-                    </div>
+    <header>
+    <div class="top-bar">
+        <div class="container">
+        <div class="top-left">
+            <img class="info" src="assets/images/mail.png"> <p class="info-text">info@ofcs.ca</p>
+            <p class="info-text">|</p>
+            <img class="info" src="assets/images/phone.png"> <p class="info-text">Coming Soon</p>
+        </div>
 
-                    <div class = "top-right">
-                        <a href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener"><img class="socials" src="assets/images/facebook.png"></a>
-                        <a href="#"><img class="socials" src="assets/images/instagram.png"></a>
-                    </div>
-                    </div>
-                </div>
-                
-                <hr class="header-divider">
+        <div class="top-right">
+            <a href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener">
+            <img class="socials" src="assets/images/facebook.png">
+            </a>
+            <a href="#"><img class="socials" src="assets/images/instagram.png"></a>
+        </div>
+        </div>
+    </div>
 
-                <div class="main-header">
-                    <div class="container">
-                    <a href="index.html"><img class="logo" src="assets/images/logo.png"></a>
-                    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
-                    ☰ Menu
-                    </button>
-                        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
-                        <ul class="mobile-nav-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="about_us.html">About Us</a></li>
-                            <li><a id="contact" href="contact_us.html">Contact Us</a></li>
-                        </ul>
-                        </nav>
-                        <div class="nav-bar">
-                        <nav>
-                            <ul class="nav-list">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="events.html">Events</a></li>
-                                <li><a class="active" href="news.html">News</a></li>
-                                <li><a href="about_us.html">About Us</a></li>
-                                <li><a id = "contact" href="contact_us.html">Contact Us</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    </div>
-                </div>
-            
-        </header>
+    <hr class="header-divider">
+
+    <div class="main-header">
+        <div class="container">
+        <a href="index.html"><img class="logo" src="assets/images/logo.png"></a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+            ☰ Menu
+        </button>
+
+        <!-- MOBILE NAV -->
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+            <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+
+            <!-- About Us + dropdown (mobile) -->
+            <li class="has-submenu">
+                <button class="mobile-submenu-toggle submenu-toggle" type="button" aria-expanded="false">
+                About Us
+                <span class="chev" aria-hidden="true">▾</span>
+                </button>
+                <ul class="submenu" aria-label="About Us submenu">
+                <li><a href="about_us.html">About Us Overview</a></li>
+                <li><a href="bod.html">Board of Directors</a></li>
+                </ul>
+            </li>
+
+            <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- DESKTOP NAV -->
+        <div class="nav-bar">
+            <nav aria-label="Primary">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a class="active" href="news.html">News</a></li>
+
+                <!-- About Us + dropdown (desktop hover) -->
+                <li class="has-submenu">
+                <a href="about_us.html" aria-haspopup="true" aria-expanded="false">
+                    About Us <span class="chev" aria-hidden="true">▾</span>
+                </a>
+                <ul class="submenu" aria-label="About Us submenu">
+                    <li><a href="about_us.html">About Us Overview</a></li>
+                    <li><a href="bod.html">Board of Directors</a></li>
+                </ul>
+                </li>
+
+                <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+            </ul>
+            </nav>
+        </div>
+
+        </div>
+    </div>
+    </header>
         
         <main class = "page-content">
             <section class="page-hero">
@@ -210,22 +239,35 @@
                 </div>
             </div>
         </footer>
-        <script>
-            const header = document.querySelector(".main-header");
-            const btn = document.querySelector(".menu-toggle");
+                <script>
+                    const header = document.querySelector(".main-header");
+                    const btn = document.querySelector(".menu-toggle");
 
-            btn.addEventListener("click", () => {
-                const open = header.classList.toggle("menu-open");
-                btn.setAttribute("aria-expanded", open ? "true" : "false");
-            });
+                    btn.addEventListener("click", () => {
+                        const open = header.classList.toggle("menu-open");
+                        btn.setAttribute("aria-expanded", open ? "true" : "false");
+                    });
 
-            // Close menu when going back to desktop size
-            window.addEventListener("resize", () => {
-                if (window.innerWidth > 900) {
-                header.classList.remove("menu-open");
-                btn.setAttribute("aria-expanded", "false");
-                }
-            });
+                    // Close menu when going back to desktop size
+                    window.addEventListener("resize", () => {
+                        if (window.innerWidth > 900) {
+                        header.classList.remove("menu-open");
+                        btn.setAttribute("aria-expanded", "false");
+
+                        // Also close any open submenus
+                        document.querySelectorAll(".has-submenu.submenu-open").forEach(li => li.classList.remove("submenu-open"));
+                        document.querySelectorAll(".submenu-toggle").forEach(t => t.setAttribute("aria-expanded", "false"));
+                        }
+                    });
+
+                    // Mobile submenu toggles
+                    document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+                        toggle.addEventListener("click", () => {
+                        const li = toggle.closest(".has-submenu");
+                        const open = li.classList.toggle("submenu-open");
+                        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+                        });
+                    });
         </script>
     </body>    
 </html>
