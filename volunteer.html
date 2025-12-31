@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Volunteer | Okanagan Filipino Canadians</title>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+
+
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/volunteer.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <link rel="preload" as="image" href="assets/images/logo.png">
+        <link rel="preload" as="image" href="assets/images/mail.png">
+        <link rel="preload" as="image" href="assets/images/phone.png">
+        <link rel="preload" as="image" href="assets/images/facebook.png">
+        <link rel="preload" as="image" href="assets/images/instagram.png">
+    </head>
+    <body>
+    <header>
+    <div class="top-bar">
+        <div class="container">
+        <div class="top-left">
+            <img class="info" src="assets/images/mail.png"> <p class="info-text">info@ofcs.ca</p>
+            <p class="info-text">|</p>
+            <img class="info" src="assets/images/phone.png"> <p class="info-text">Coming Soon</p>
+        </div>
+
+        <div class="top-right">
+            <a href="https://www.facebook.com/groups/okanaganfilipinoclub" target="_blank" rel="noopener">
+            <img class="socials" src="assets/images/facebook.png">
+            </a>
+            <a href="#"><img class="socials" src="assets/images/instagram.png"></a>
+        </div>
+        </div>
+    </div>
+
+    <hr class="header-divider">
+
+    <div class="main-header">
+        <div class="container">
+        <a href="index.html"><img class="logo" src="assets/images/logo.png"></a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu">
+            ☰ Menu
+        </button>
+
+        <!-- MOBILE NAV -->
+        <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+            <ul class="mobile-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+
+            <!-- About Us + dropdown (mobile) -->
+            <li class="has-submenu">
+                <button class="mobile-submenu-toggle submenu-toggle" type="button" aria-expanded="false">
+                About Us
+                <span class="chev" aria-hidden="true">▾</span>
+                </button>
+                <ul class="submenu" aria-label="About Us submenu">
+                <li><a href="about_us.html">About Us Overview</a></li>
+                <li><a href="bod.html">Board of Directors</a></li>
+                </ul>
+            </li>
+
+            <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- DESKTOP NAV -->
+        <div class="nav-bar">
+            <nav aria-label="Primary">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a  href="news.html">News</a></li>
+
+                <!-- About Us + dropdown (desktop hover) -->
+                <li class="has-submenu">
+                <a href="about_us.html" aria-haspopup="true" aria-expanded="false">
+                    About Us <span class="chev" aria-hidden="true">▾</span>
+                </a>
+                <ul class="submenu" aria-label="About Us submenu">
+                    <li><a href="about_us.html">About Us Overview</a></li>
+                    <li><a href="bod.html">Board of Directors</a></li>
+                </ul>
+                </li>
+
+                <li><a id="contact" href="contact_us.html">Contact Us</a></li>
+            </ul>
+            </nav>
+        </div>
+
+        </div>
+    </div>
+    </header>
+        
+    <main class="page-content">
+      <!-- Page hero -->
+      <section class="vol-hero">
+        <div class="container">
+          <p class="vol-eyebrow">Get Involved</p>
+          <h1>Be a Volunteer</h1>
+          <p class="vol-lead">
+            Thank you for your interest in volunteering with OFCS! Volunteers are the heart of our community.
+            Whether you can help occasionally or want to be more involved, we’d love to hear from you.
+          </p>
+        </div>
+      </section>
+
+      <!-- Form card -->
+      <section class="vol-section">
+        <div class="container">
+          <div class="vol-card">
+            <div class="vol-card-head">
+              <h2>OFCS Volunteer Sign-Up Form</h2>
+              <p>
+                Please fill out the form below. Submissions are securely collected through Netlify Forms and
+                sent to our team.
+              </p>
+            </div>
+
+            <form
+              name="volunteer"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/thank-you.html"
+              class="vol-form"
+            >
+              <!-- required for Netlify -->
+              <input type="hidden" name="form-name" value="volunteer" />
+
+              <!-- honeypot (spam protection) -->
+              <p class="sr-only">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
+
+              <!-- Personal Information -->
+              <fieldset class="vol-fieldset">
+                <legend>Personal Information</legend>
+
+                <div class="vol-grid">
+                  <div class="field">
+                    <label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+                    <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="preferredName">Preferred Name (if any)</label>
+                    <input id="preferredName" name="preferredName" type="text" />
+                  </div>
+
+                  <div class="field">
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" required />
+                  </div>
+
+                  <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel" />
+                  </div>
+
+                  <div class="field field--wide">
+                    <label for="city">City / Area</label>
+                    <input id="city" name="city" type="text" placeholder="e.g., Kelowna, West Kelowna, Lake Country" />
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Availability -->
+                <fieldset class="field">
+                <legend class="legend">Availability</legend>
+
+                <div class="check-grid">
+                    <p class="check-label">How often are you available to volunteer?</p>
+
+                    <div class="check-options">
+                    <label class="check">
+                        <input type="checkbox" name="availability_frequency" value="One-time / Event-based">
+                        <span>One-time / Event-based</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="availability_frequency" value="Occasionally">
+                        <span>Occasionally</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="availability_frequency" value="Monthly">
+                        <span>Monthly</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="availability_frequency" value="Ongoing / Regular basis">
+                        <span>Ongoing / Regular basis</span>
+                    </label>
+                    </div>
+
+                    <p class="check-label">Preferred days/times:</p>
+
+                    <div class="check-options">
+                    <label class="check">
+                        <input type="checkbox" name="availability_times" value="Weekdays">
+                        <span>Weekdays</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="availability_times" value="Weekends">
+                        <span>Weekends</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="availability_times" value="Evenings">
+                        <span>Evenings</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="checkbox" name="availability_times" value="Flexible">
+                        <span>Flexible</span>
+                    </label>
+                    </div>
+                </div>
+                </fieldset>
+
+
+              <!-- Areas of Interest -->
+              <fieldset class="vol-fieldset">
+                <legend>Areas You’re Interested In</legend>
+                <p class="field-hint">You may select more than one.</p>
+
+                <div class="checks checks--two">
+                  <label class="check"><input type="checkbox" name="interest" value="Event support" /> Event support (setup, registration, clean-up)</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Cultural events & festivals" /> Cultural events & festivals</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Youth & Young Professionals programs" /> Youth & Young Professionals programs</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Community outreach & newcomer support" /> Community outreach & newcomer support</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Sports, wellness & recreational activities" /> Sports, wellness & recreational activities</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Administration / coordination support" /> Administration / coordination support</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Social media, marketing & communications" /> Social media, marketing & communications</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Photography / videography" /> Photography / videography</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Website / IT / digital support" /> Website / IT / digital support</label>
+                  <label class="check"><input type="checkbox" name="interest" value="Fundraising & sponsorship support" /> Fundraising & sponsorship support</label>
+                  <label class="check"><input type="checkbox" name="interest" value="General volunteering" /> General volunteering / happy to help where needed</label>
+                </div>
+              </fieldset>
+
+              <!-- Skills & Experience -->
+              <fieldset class="vol-fieldset">
+                <legend>Skills &amp; Experience (Optional)</legend>
+
+                <div class="field">
+                  <label for="skills">Do you have any skills, experience, or interests you’d like to share?</label>
+                  <textarea
+                    id="skills"
+                    name="skills"
+                    rows="4"
+                    placeholder="e.g., teaching, organizing events, public speaking, graphic design, finance, mentoring…"
+                  ></textarea>
+                </div>
+              </fieldset>
+
+              <!-- OFCS Journey -->
+                <fieldset class="vol-fieldset">
+                <legend class="legend">OFCS Journey</legend>
+
+                <div class="field">
+                    <p class="field-hint">Are you currently a member of OFCS?</p>
+
+                    <div class="option-grid option-grid--single">
+                    <label class="check">
+                        <input type="radio" name="ofcs_member" value="Yes" required>
+                        <span>Yes</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="radio" name="ofcs_member" value="No">
+                        <span>No</span>
+                    </label>
+
+                    <label class="check">
+                        <input type="radio" name="ofcs_member" value="Not yet, but interested">
+                        <span>Not yet, but interested</span>
+                    </label>
+                    </div>
+                    </div>
+                    <div class="field">
+                        <label for="why" style="margin-top: 0.5rem;">Why are you interested in volunteering with OFCS?</label>
+                        <textarea id="why" name="why" rows="4"></textarea>
+                    </div>
+                </fieldset>
+
+              <!-- Consent -->
+              <fieldset class="vol-fieldset">
+                <legend>Consent &amp; Communication</legend>
+
+                <label class="check check--consent">
+                  <input type="checkbox" name="consent" value="Agreed" required />
+                  I agree to be contacted by OFCS regarding volunteer opportunities, events, and community updates.
+                </label>
+              </fieldset>
+
+              <div class="vol-actions">
+                <button class="btn primary" type="submit">Submit Form</button>
+                <p class="vol-next">
+                  <strong>What happens next?</strong> Once we receive your form, a member of the OFCS team will reach out
+                  when a suitable volunteer opportunity becomes available. Thank you for being part of our bayanihan spirit!
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+        
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <!-- Column 1: About -->
+                <div class="footer-col">
+                <h3 class="footer-title">Okanagan Filipino Canadians</h3>
+                <p class="footer-text">
+                    Building community through culture, events, and support for Filipino Canadians in the Okanagan.
+                </p>
+
+                <p class="footer-landack">
+                    We respectfully acknowledge that we are on the traditional, ancestral, and unceded territory of the Syilx Okanagan Nation.
+                </p>
+                <p class="footer-reinforce">
+                    Rooted in Culture. United in Community. Serving Filipino-Canadians in the Okanagan for over 30 years.
+                </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col">
+                <h3 class="footer-title">Contact</h3>
+
+                <ul class="footer-contact">
+                    <li>
+                    <span class="contact-label">Email:</span>
+                    <a href="mailto:info@ofcs.ca">info@ofcs.ca</a>
+                    </li>
+                    <li>
+                    <span class="contact-label">Phone:</span>
+                    <a href="">Coming Soon</a>
+                    </li>
+                    <li>
+                    <span class="contact-label">Location:</span>
+                    <span>Kelowna, BC</span>
+                    </li>
+                </ul>
+
+                <div class="footer-socials" aria-label="Social media links">
+                    <a href="#" aria-label="Facebook">
+                    <img src="assets/images/facebook.png" alt="Facebook" width="18" height="18">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                    <img src="assets/images/instagram.png" alt="Instagram" width="18" height="18">
+                    </a>
+                </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container footer-bottom-inner">
+                <p>© <span id="year"></span> Okanagan Filipino Canadians. All rights reserved.</p>
+                <p class="footer-small-links">
+                    <a href="privacy.html">Privacy</a>
+                    <span>·</span>
+                    <a href="terms.html">Terms</a>
+                </p>
+                </div>
+            </div>
+        </footer>
+                <script>
+                    const header = document.querySelector(".main-header");
+                    const btn = document.querySelector(".menu-toggle");
+
+                    btn.addEventListener("click", () => {
+                        const open = header.classList.toggle("menu-open");
+                        btn.setAttribute("aria-expanded", open ? "true" : "false");
+                    });
+
+                    // Close menu when going back to desktop size
+                    window.addEventListener("resize", () => {
+                        if (window.innerWidth > 900) {
+                        header.classList.remove("menu-open");
+                        btn.setAttribute("aria-expanded", "false");
+
+                        // Also close any open submenus
+                        document.querySelectorAll(".has-submenu.submenu-open").forEach(li => li.classList.remove("submenu-open"));
+                        document.querySelectorAll(".submenu-toggle").forEach(t => t.setAttribute("aria-expanded", "false"));
+                        }
+                    });
+
+                    // Mobile submenu toggles
+                    document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+                        toggle.addEventListener("click", () => {
+                        const li = toggle.closest(".has-submenu");
+                        const open = li.classList.toggle("submenu-open");
+                        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+                        });
+                    });
+        </script>
+    </body>    
+</html>
+
+
+
