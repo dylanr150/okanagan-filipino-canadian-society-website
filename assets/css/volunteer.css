@@ -2,9 +2,9 @@
    VOLUNTEER PAGE
    Matches your theme (Inter, OFCS blue, clean cards)
 ========================================================= */
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
+.vol-form input,
+.vol-form textarea,
+.vol-form select {
   box-sizing: border-box;
 }
 
