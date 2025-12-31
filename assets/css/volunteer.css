@@ -2,9 +2,12 @@
    VOLUNTEER PAGE
    Matches your theme (Inter, OFCS blue, clean cards)
 ========================================================= */
-*, *::before, *::after {
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
   box-sizing: border-box;
 }
+
 
 .page-content {
   padding-bottom: 2.25rem;
