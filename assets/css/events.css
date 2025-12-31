@@ -39,6 +39,7 @@
 }
 
 /* HERO */
+
 .page-hero {
   padding: 2rem 0 1.25rem;
   background: #f3f5f9;
@@ -56,10 +57,20 @@
   color: #091024;
 }
 
-.page-hero p {
+.herop {
   margin: 0 0 1.15rem;
   line-height: 1.65;
   color: #4c556a;
+}
+
+.intro-eyebrow {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  color: #23407c;
 }
 
 .hero-actions {
@@ -256,6 +267,8 @@
   line-height: 1.6;
   max-width: 70ch;
 }
+
+
 
 /* =========================================================
    RESPONSIVE

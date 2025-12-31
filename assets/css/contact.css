@@ -1,6 +1,8 @@
 /* Contact page only (works with your existing main.css) */
 
-*, *::before, *::after {
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
   box-sizing: border-box;
 }
 
