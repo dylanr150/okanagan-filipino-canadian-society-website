@@ -195,6 +195,13 @@
   margin-left: 0.25rem;
 }
 
+.event-date{
+  color: #960202;
+  font-weight: 900;
+  margin-left: 0.25rem;
+  
+}
+
 /* Sub bullets under a specific event */
 .event-sublist {
   margin: 0.5rem 0 0;
