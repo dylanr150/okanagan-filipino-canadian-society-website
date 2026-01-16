@@ -239,7 +239,7 @@ nav a {
 }
 
 /* Breakpoint: swap desktop nav for hamburger */
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
   .nav-bar {
     display: none; /* hide your existing desktop nav */
   }
