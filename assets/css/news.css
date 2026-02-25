@@ -115,26 +115,54 @@
 
 /* NEWS GRID */
 .news-grid {
+  max-height: 90vh; /* or whatever fits your design */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
-
-  align-items: start;
+  overflow-y:auto;
 }
 
+/* CARD */
 .news-card {
   background: #ffffff;
   border: 1px solid #e7e7e7;
   box-shadow: 0 10px 30px rgba(10, 20, 40, 0.06);
-  border-radius: 16px;
+  overflow: hidden;
 }
 
+/* SIDE BY SIDE LAYOUT */
 .news-card-inner {
-  padding: 1.1rem 1.1rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  padding: 1.4rem;
 }
+
+/* TEXT SIDE */
+.news-content {
+  display:block;
+}
+
+/* FLOAT IMAGE */
+.news-inline-image {
+  float: right;
+  width: min(320px, 42%);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 0.25rem 0 0.85rem 1rem; /* space between text + image */
+  border: 1px solid #cacaca;
+  background: #f3f5f9;
+}
+
+.news-inline-video {
+  float: right;
+  width: min(320px, 42%);
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 14px;
+  margin: 0.25rem 0 0.85rem 1rem; /* space between text + image */
+  border: 1px solid #cacaca;
+  background: #000000;
+}
+
 
 .news-meta {
   display: flex;
@@ -181,11 +209,19 @@
   line-height: 1.65;
 }
 
+.news-excerpt2 {
+  margin: 0;
+  color: #39455f;
+  line-height: 1.65;
+}
+
+/* PUSH BUTTONS TO BOTTOM */
 .news-actions {
+  clear: both;
+  margin-top: 1rem;
   display: flex;
+  gap: 0.75rem;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: auto;
 }
 
 /* =========================================================
@@ -196,18 +232,16 @@
   overflow: hidden; /* ensures rounded corners clip image */
 }
 
+/* IMAGE SIDE */
 .news-media {
-  margin: 0;
-  border-bottom: 1px solid #e7e7e7;
   background: #f3f5f9;
 }
 
 .news-image {
-  width: 100%;
-  height: 220px;
-  display: block;
+  width: 50%;
+  height: 50%;
   object-fit: cover;
-  object-position: center;
+  display: block;
 }
 
 /* If you want smaller image on tighter screens */
@@ -217,6 +251,26 @@
   }
 }
 
+@media (max-width: 800px) {
+  .news-inline-image {
+    float: none;
+    width: 100%;
+    margin: 0.75rem 0 0.85rem;
+    aspect-ratio: 16 / 9;
+  }
+
+  
+  .news-inline-video {
+    float: none;
+    width: 100%;
+    margin: 0.75rem 0 0.85rem;
+    aspect-ratio: 16 / 9;
+  }
+
+  .news-actions {
+    clear: none;
+  }
+}
 /* If no image is provided, you can hide the media block */
 .news-media.is-hidden {
   display: none;
@@ -233,7 +287,7 @@
 /* Collapsed state (JS adds .is-collapsed by default) */
 .news-excerpt.is-collapsed {
   /* keep it readable, not too short */
-  max-height: 10.5em; /* ~6 lines depending on font */
+  max-height: 16.5em; /* ~6 lines depending on font */
   overflow: hidden;
   position: relative;
 }
