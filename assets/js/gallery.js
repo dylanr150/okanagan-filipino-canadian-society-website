@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const slidesData = [
     {
       type: "Event",
+      title: "Paskong Pinoy",
+      text: "Join us for Paskong Pinoy 2026 as we celebrate the joy of Christmas and Filipino traditions! Press the button below to go to the registration page, or scan the QR code above!",
+      image: "assets/images/qr-home-page4.png",
+      linkText: "Register Here",
+      linkHref: "registration.html"
+    },
+    {
+      type: "Event",
       title: "Community Gathering — Details Coming Soon",
       text: "We’re updating the events calendar. In the meantime, check our Events page for updates.",
       image: "assets/images/community1.jpeg",
